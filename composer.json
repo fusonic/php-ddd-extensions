@@ -1,8 +1,8 @@
 {
-    "name": "fusonic/csv-reader",
+    "name": "fusonic/ddd-extensions",
     "license": "MIT",
-    "version": "0.2.1",
-    "description": "Map data from CSV files to typed PHP models.",
+    "version": "0.0.3",
+    "description": "Symfony domain-driven design building blocks for usage with Doctrine ORM.",
     "type": "library",
     "authors": [
         {
@@ -12,27 +12,31 @@
     ],
     "autoload": {
         "psr-4": {
-            "Fusonic\\CsvReader\\": "src/"
+            "Fusonic\\DDDExtensions\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Fusonic\\CsvReader\\Tests\\": "tests/"
+            "Fusonic\\DDDExtensions\\Tests\\": "tests/"
         }
     },
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "doctrine/orm": "^2.11",
+        "psr/event-dispatcher": "^1.0",
+        "psr/log": "^3.0",
+        "symfony/messenger": "^5.4|^6.0",
+        "beberlei/assert": "^3.3"
     },
     "require-dev": {
-        "ext-intl": "*",
-        "phpunit/phpunit": "^9.5",
-        "phpstan/phpstan": "^1.5",
-        "friendsofphp/php-cs-fixer": "^3.8",
-        "phpstan/phpstan-phpunit": "^1.1",
-        "phpstan/phpstan-strict-rules": "^1.1"
-    },
-    "suggest": {
-        "ext-intl": "Required to use IntlValueConverter for advanced value conversion."
+        "phpunit/phpunit": "^9.3",
+        "phpstan/phpstan": "^1.4",
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "symfony/phpunit-bridge": "^5.4|^6.0",
+        "symfony/cache": "^5.4|^6.0",
+        "phpstan/phpstan-strict-rules": "^1.1",
+        "nikic/php-parser": "^4.13"
     },
     "scripts": {
         "phpstan": "php -d memory_limit=2048M vendor/bin/phpstan analyse",
