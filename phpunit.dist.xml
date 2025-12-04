@@ -7,10 +7,13 @@
          colors="true"
          beStrictAboutCoverageMetadata="true"
          beStrictAboutOutputDuringTests="true"
+         displayDetailsOnPhpunitDeprecations="true"
          displayDetailsOnTestsThatTriggerDeprecations="true"
          displayDetailsOnTestsThatTriggerNotices="true"
          displayDetailsOnTestsThatTriggerWarnings="true"
          displayDetailsOnTestsThatTriggerErrors="true"
+         failOnPhpunitDeprecation="true"
+         failOnDeprecation="true"
          failOnRisky="true"
          failOnNotice="true"
          failOnWarning="true">
